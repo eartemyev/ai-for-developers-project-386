@@ -24,14 +24,16 @@ public class EventTypesEndpointTests : IAsyncLifetime
     }
 
     [Fact]
-    public async Task ListEventTypes_ReturnsEmptyArrayInitially()
+    public async Task ListEventTypes_ReturnsSeededEventTypesOnStartup()
     {
         var response = await client.GetAsync("/api/event-types");
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         var eventTypes = await response.Content.ReadFromJsonAsync<List<EventTypeDto>>();
         Assert.NotNull(eventTypes);
-        Assert.Empty(eventTypes);
+        Assert.Equal(2, eventTypes.Count);
+        Assert.Contains(eventTypes, e => e.Name == "30 минут" && e.DurationMinutes == 30);
+        Assert.Contains(eventTypes, e => e.Name == "15 минут" && e.DurationMinutes == 15);
     }
 
     [Fact]
