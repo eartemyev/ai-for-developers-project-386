@@ -2,3 +2,10 @@ node_modules/
 tsp-output/
 dist/
 *.log
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
