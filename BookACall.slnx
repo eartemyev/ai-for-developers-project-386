@@ -1,7 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/BookACall.Api/BookACall.Api.csproj" />
-    <Project Path="src/BookACall.Client/bookacall.client.esproj">
+    <Project Path="src/bookacall.client/bookacall.client.esproj">
       <Build />
       <Deploy />
     </Project>

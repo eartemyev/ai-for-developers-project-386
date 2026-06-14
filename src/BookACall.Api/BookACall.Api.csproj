@@ -21,8 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BookACall.Client\bookacall.client.esproj" >
+  <ItemGroup Condition="'$(DockerBuild)' != 'true'">
+    <ProjectReference Include="..\bookacall.client\bookacall.client.esproj" >
 	    <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
