@@ -21,6 +21,9 @@ using (var scope = app.Services.CreateScope())
     await DbSeeder.SeedAsync(db);
 }
 
+app.UseDefaultFiles();
+app.MapStaticAssets();
+
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
@@ -28,19 +31,10 @@ app.UseSwaggerUI(options =>
     options.RoutePrefix = "swagger";
 });
 
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/")
-    {
-        context.Response.Redirect("/swagger");
-        return;
-    }
-
-    await next();
-});
-
 app.MapEventTypeEndpoints();
 app.MapBookingEndpoints();
+
+app.MapFallbackToFile("/index.html");
 
 app.Run();
 

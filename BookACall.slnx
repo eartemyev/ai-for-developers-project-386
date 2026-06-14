@@ -1,6 +1,10 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/BookACall.Api/BookACall.Api.csproj" />
+    <Project Path="src/BookACall.Client/bookacall.client.esproj">
+      <Build />
+      <Deploy />
+    </Project>
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/BookACall.Api.Tests/BookACall.Api.Tests.csproj" />
