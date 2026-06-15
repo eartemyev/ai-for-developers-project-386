@@ -1,6 +1,7 @@
 node_modules/
 tsp-output/
 dist/
+test-results/
 *.log
 
 # .NET
