@@ -10,3 +10,4 @@ obj/
 *.user
 *.suo
 .vs/
+src/BookACall.Api/wwwroot/
