@@ -20,17 +20,19 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 
 ### Types
 
-| Type | When to use | Version bump (release-please) |
-|------|-------------|-------------------------------|
-| `feat` | New user-facing functionality | minor |
-| `fix` | Bug fix | patch |
-| `docs` | Documentation only | none |
-| `test` | Tests only | none |
-| `ci` | CI/CD changes | none |
-| `chore` | Maintenance, deps, refactors without behavior change | none |
-| `perf` | Performance improvement | patch |
-| `revert` | Revert a previous commit | depends on reverted commit |
-| `feat!` or `BREAKING CHANGE:` footer | Breaking API or behavior change | major |
+
+| Type                                 | When to use                                          | Version bump (release-please) |
+| ------------------------------------ | ---------------------------------------------------- | ----------------------------- |
+| `feat`                               | New user-facing functionality                        | minor                         |
+| `fix`                                | Bug fix                                              | patch                         |
+| `docs`                               | Documentation only                                   | none                          |
+| `test`                               | Tests only                                           | none                          |
+| `ci`                                 | CI/CD changes                                        | none                          |
+| `chore`                              | Maintenance, deps, refactors without behavior change | none                          |
+| `perf`                               | Performance improvement                              | patch                         |
+| `revert`                             | Revert a previous commit                             | depends on reverted commit    |
+| `feat!` or `BREAKING CHANGE:` footer | Breaking API or behavior change                      | major                         |
+
 
 ### Examples
 
@@ -53,3 +55,4 @@ Releases are automated with [release-please](https://github.com/googleapis/relea
 1. Conventional commits land on `main`.
 2. release-please opens or updates a release PR with `CHANGELOG.md` and a proposed version.
 3. Merging the release PR creates a Git tag and GitHub Release.
+
